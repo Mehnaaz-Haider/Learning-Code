@@ -138,6 +138,27 @@ int main()
                 printf("Greatest of 4 numbers is %d",d);
             }
         }
+        printf("\n\n");
         /* Greatest of 4 using nested if (Question 4) - End Here */
+    }
+
+    {
+        /* Pass or Fail using Logical Operator (Question 5) - Start Here */
+        printf("==================== ");
+        printf("Question 5 ");
+        printf("====================\n");
+
+        int M1,M2;
+
+        printf("Write Marks in Physics: ");
+        scanf("%d", &M1);
+        printf("Write Marks in Maths: ");
+        scanf("%d", &M2);
+
+        if(M1>50 && M2>50)
+        printf("Result: Pass");
+        else
+        printf("Result: Fail");
+        /* Pass or Fail using Logical Operator (Question 5) - End Here */
     }
 }
