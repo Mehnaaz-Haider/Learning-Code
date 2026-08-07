@@ -159,6 +159,89 @@ int main()
         printf("Result: Pass");
         else
         printf("Result: Fail");
+        printf("\n\n");
         /* Pass or Fail using Logical Operator (Question 5) - End Here */
+    }
+
+    {
+        /* Pass or Fail using Logical Operator (Question 6) - Start Here */
+        printf("==================== ");
+        printf("Question 6 ");
+        printf("====================\n");
+
+        int M1,M2,M3;
+
+        printf("Write Marks in Physics: ");
+        scanf("%d", &M1);
+        printf("Write Marks in Maths: ");
+        scanf("%d", &M2);
+        printf("Write Marks in Biology: ");
+        scanf("%d", &M3);
+
+        if(M1<0 || M1>100 || M2<0 || M2>100 || M3<0 || M3>100)
+        printf("Error: Invalid Marks! Marks should be between 0 and 100.");
+        else if(M1>50 && M2>50 && M3>50)
+        printf("Result: Pass");
+        else if((M1>50 && M2>50) || (M1>50 && M3>50) || (M2>50 && M3>50))
+        printf("Result: Compartment");
+        else
+        printf("Result: Fail");
+        printf("\n\n");
+        /* Pass or Fail using Logical Operator (Question 6) - End Here */
+    }
+
+    {
+        /* Pass or Fail using Conditional Operator (Question 7) - Start Here */
+        printf("==================== ");
+        printf("Question 7 ");
+        printf("====================\n");
+
+        int M1,M2,M3;
+
+        printf("Write Marks in Physics: ");
+        scanf("%d", &M1);
+        printf("Write Marks in Maths: ");
+        scanf("%d", &M2);
+        printf("Write Marks in Biology: ");
+        scanf("%d", &M3);
+
+        if(M1<0 || M1>100 || M2<0 || M2>100 || M3<0 || M3>100)
+        printf("Error: Invalid Marks! Marks should be between 0 and 100.");
+        else
+        (M1>50? (M2>50? (M3>50?printf("Result: Pass"):printf("Result: Compartment")):(M3>50?printf("Result: Compartment"):printf("Result: Fail"))) : (M2>50? (M3>50?printf("Result: Compartment"):printf("Result: Fail")):printf("Result: Fail")));
+        printf("\n\n");
+        /* Pass or Fail using Conditional Operator (Question 7) - End Here */
+    }
+
+    {
+        /* Pass or Fail using Count Variable (Question 8) - Start Here */
+        printf("==================== ");
+        printf("Question 8 ");
+        printf("====================\n");
+
+        int M1,M2,M3;
+
+        printf("Write Marks in Physics: ");
+        scanf("%d", &M1);
+        printf("Write Marks in Maths: ");
+        scanf("%d", &M2);
+        printf("Write Marks in Biology: ");
+        scanf("%d", &M3);
+
+        int count = 0;
+        if(M1>50)
+        count++;
+        if(M2>50)
+        count++;
+        if(M3>50)
+        count++;
+        if(count == 3)
+        printf("Result: Pass");
+        else if(count == 2)
+        printf("Result: Compartment");
+        else
+        printf("Result: Fail");
+        printf("\n\n");
+        /* Pass or Fail using Count Variable (Question 8) - End Here */
     }
 }
