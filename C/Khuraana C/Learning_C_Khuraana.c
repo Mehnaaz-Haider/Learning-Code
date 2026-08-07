@@ -2,6 +2,16 @@
 
 int main()
 {
+    /* Insert Your Choice */
+    int choice;
+
+    printf("=========== All Questions ===========\n\n");
+    printf("Q1     Q2     Q3     Q4     Q5\nQ6     Q7     Q8     Q9\n\n");
+    printf("Select Your Question Number (1-9): ");
+    scanf("%d",&choice);
+    printf("\n\n");
+
+    if(choice == 1)
     {
         /* Pass or Fail (Question 1) - Start Here */
         int M1,M2;
@@ -25,6 +35,7 @@ int main()
         /* Pass or Fail (Question 1) - End Here */
     }
 
+    else if(choice == 2)
     {
         /* Pass or Fail (Question 2) - Start Here */
         int M1,M2,M3;
@@ -70,6 +81,7 @@ int main()
         /* Pass or Fail (Question 2) - End Here */
     }
 
+    else if(choice == 3)
     {
         /* Greatest of 3 using nested if (Question 3) - Start Here */
         int x,y,z;
@@ -96,6 +108,7 @@ int main()
         /* Greatest of 3 using nested if (Question 3) - End Here */
     }
 
+    else if(choice == 4)
     {
         /* Greatest of 4 using nested if (Question 4) - Start Here */
         int a,b,c,d;
@@ -142,6 +155,7 @@ int main()
         /* Greatest of 4 using nested if (Question 4) - End Here */
     }
 
+    else if(choice == 5)
     {
         /* Pass or Fail using Logical Operator (Question 5) - Start Here */
         printf("==================== ");
@@ -163,6 +177,7 @@ int main()
         /* Pass or Fail using Logical Operator (Question 5) - End Here */
     }
 
+    else if(choice == 6)
     {
         /* Pass or Fail using Logical Operator (Question 6) - Start Here */
         printf("==================== ");
@@ -190,6 +205,7 @@ int main()
         /* Pass or Fail using Logical Operator (Question 6) - End Here */
     }
 
+    else if(choice == 7)
     {
         /* Pass or Fail using Conditional Operator (Question 7) - Start Here */
         printf("==================== ");
@@ -213,6 +229,7 @@ int main()
         /* Pass or Fail using Conditional Operator (Question 7) - End Here */
     }
 
+    else if(choice == 8)
     {
         /* Pass or Fail using Count Variable (Question 8) - Start Here */
         printf("==================== ");
@@ -244,4 +261,31 @@ int main()
         printf("\n\n");
         /* Pass or Fail using Count Variable (Question 8) - End Here */
     }
+
+    else if(choice == 9)
+    {
+        /* Grade using else-if (Question 9) - Start Here */
+        printf("==================== ");
+        printf("Question 9 ");
+        printf("====================\n");
+
+        int M;
+
+        printf("Write Marks: ");
+        scanf("%d", &M);
+
+        if(M>=90 && M<=99)
+        printf("Grade: A");
+        else if(M>=80 && M<=89)
+        printf("Grade: B");
+        else if(M>=70 && M<=79)
+        printf("Grade: C");
+        else if(M>=60 && M<=69)
+        printf("Grade: D");
+        else
+        printf("Under Grade");
+        printf("\n\n");
+        /* Grade using else-if (Question 9) - End Here */
+    }
+    else printf("invalid choice");
 }
