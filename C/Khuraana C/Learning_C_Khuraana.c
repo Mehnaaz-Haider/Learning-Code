@@ -1,15 +1,18 @@
 #include <stdio.h>
+#include <ctype.h>
 
 int main()
 {
-    /* Insert Your Choice */
+    /* Insert Your Choice - Code Start*/
     int choice;
 
     printf("=========== All Questions ===========\n\n");
-    printf("Q1     Q2     Q3     Q4     Q5\nQ6     Q7     Q8     Q9\n\n");
-    printf("Select Your Question Number (1-9): ");
+    printf("Q1     Q2     Q3     Q4     Q5\nQ6     Q7     Q8     Q9     Q10\nQ11     Q12     Q13     Q14     Q15\n\n");
+    printf("Select Your Question Number (1-15): ");
     scanf("%d",&choice);
     printf("\n\n");
+
+    /* Insert Your Choice - Code Start*/
 
     if(choice == 1)
     {
@@ -286,6 +289,76 @@ int main()
         printf("Under Grade");
         printf("\n\n");
         /* Grade using else-if (Question 9) - End Here */
+    }
+
+    else if(choice == 10)
+    {
+        /* Print Vowel using Switch-Case (Question 10) - Start Here */
+        printf("==================== ");
+        printf("Question 10 ");
+        printf("====================\n");
+
+        char x;
+
+        printf("Write input: ");
+        scanf(" %c",&x);
+
+        switch(tolower(x))
+        {
+        case'a':
+        case'e':
+        case'i':
+        case'o':
+        case'u':
+        printf("Vowel");
+        break;
+        default:
+        printf("Not Vowel");
+        }
+        printf("\n\n");
+        /* Print Vowel using Switch-Case (Question 10) - End Here */
+    }
+
+    else if(choice == 11)
+    {
+        /* toupper code (Question 11) - Start Here */
+        printf("==================== ");
+        printf("Question 11 ");
+        printf("====================\n");
+
+        char x,y;
+
+        printf("Write your input in lowercase: ");
+        scanf(" %c",&x);
+
+        y = x - 32;
+        if(x>=97 && x<=122)
+        printf("Output: %c",y);
+        else
+        printf("%c",x);
+        printf("\n\n");
+        /* toupper code (Question 11) - End Here */
+    }
+
+    else if(choice == 12)
+    {
+        /* tolower code (Question 12) - Start Here */
+        printf("==================== ");
+        printf("Question 12 ");
+        printf("====================\n");
+
+        char x,y;
+
+        printf("Write your input in uppercase: ");
+        scanf(" %c",&x);
+
+        y = x + 32;
+        if(x>=65 && x<=90)
+        printf("Output: %c",y);
+        else
+        printf("%c",x);
+        printf("\n\n");
+        /* tolower code (Question 12) - End Here */
     }
     else printf("invalid choice");
 }
