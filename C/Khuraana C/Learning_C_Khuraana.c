@@ -360,5 +360,97 @@ int main()
         printf("\n\n");
         /* tolower code (Question 12) - End Here */
     }
+
+    else if(choice == 13)
+    {
+        /* Grade using switch-case (Question 13) - Start Here */
+        printf("==================== ");
+        printf("Question 13 ");
+        printf("====================\n");
+
+        int x;
+
+        printf("Write Marks: ");
+        scanf("%d",&x);
+
+        switch(x/10)
+        {
+            case 9:
+            printf("Grade: A");
+            break;
+            case 8:
+            printf("Grade: B");
+            break;
+            case 7:
+            printf("Grade: C");
+            break;
+            case 6:
+            printf("Grade: D");
+            break;
+            default:
+            printf("Under grade");
+        }
+        printf("\n\n");
+        /* Grade using switch-case (Question 13) - End Here */
+    }
+
+    else if(choice == 14)
+    {
+        /* Grade using switch-case (Question 14) - Start Here */
+        printf("==================== ");
+        printf("Question 14 ");
+        printf("====================\n");
+
+        int x;
+
+        printf("Write Marks: ");
+        scanf("%d",&x);
+
+        if(x%10 == 0)
+        x--;
+        switch(x/10)
+        {
+            case 9:
+            printf("Grade: A");
+            break;
+            case 8:
+            printf("Grade: B");
+            break;
+            case 7:
+            printf("Grade: C");
+            break;
+            case 6:
+            printf("Grade: D");
+            break;
+            default:
+            printf("Under grade");
+        }
+        printf("\n\n");
+        /* Grade using switch-case (Question 14) - End Here */
+    }
+
+    else if(choice == 15)
+    {
+        /* Greatest of 2 using switch-case (Question 15) - Start Here */
+        printf("==================== ");
+        printf("Question 15 ");
+        printf("====================\n");
+
+        int x,y;
+
+        printf("Write 2 numbers:\n");
+        scanf("%d%d",&x,&y);
+
+        switch(x>y)
+        {
+            case 1:
+            printf("Greatest number is: %d",x);
+            break;
+            case 0:
+            printf("Greatest number is: %d",y);
+        }
+        printf("\n\n");
+        /* Greatest of 2 using switch-case (Question 15) - End Here */
+    }
     else printf("invalid choice");
 }
