@@ -7,7 +7,7 @@ int main()
     int choice;
 
     printf("=========== All Questions ===========\n\n");
-    printf("Q1     Q2     Q3     Q4     Q5\nQ6     Q7     Q8     Q9     Q10\nQ11     Q12     Q13     Q14     Q15\n\n");
+    printf("Q1     Q2     Q3     Q4     Q5\nQ6     Q7     Q8     Q9     Q10\nQ11     Q12     Q13     Q14     Q15\nQ16     Q17     Q18     Q19     Q20\n\n");
     printf("Select Your Question Number (1-15): ");
     scanf("%d",&choice);
     printf("\n\n");
@@ -451,6 +451,44 @@ int main()
         }
         printf("\n\n");
         /* Greatest of 2 using switch-case (Question 15) - End Here */
+    }
+
+    else if(choice == 16)
+    {
+        /* Greatest of 3 using switch-case (Question 16) - Start Here */
+        printf("==================== ");
+        printf("Question 16 ");
+        printf("====================\n");
+
+        int x,y,z;
+
+        printf("Write 3 numbers:\n");
+        scanf("%d%d%d",&x,&y,&z);
+
+        switch(x>y)
+        {
+            case 1:
+            switch(x>z)
+            {
+                case 1:
+                printf("Greatest of 3 number is: %d",x);
+                break;
+                case 0:
+                printf("Greatest of 3 number is: %d",z);
+            }
+            break;
+            case 0:
+            switch(y>z)
+            {
+                case 1:
+                printf("Greatest of 3 number is: %d",y);
+                break;
+                case 0:
+                printf("Greatest of 3 number is: %d",z);
+            }
+        }
+        printf("\n\n");
+        /* Greatest of 3 using switch-case (Question 16) - End Here */
     }
     else printf("invalid choice");
 }
