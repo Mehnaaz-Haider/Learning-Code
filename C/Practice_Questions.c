@@ -141,7 +141,26 @@ int main()
         printf("%-8s :  %s\n","Name",name);
         printf("%-8s :  %s %d, %d\n","DOB",month,date,year);
         printf("%-8s :  %s\n","Mobile",mobile);
+        printf("\n\n");
         /* Question 1d - End Here */
+      }
+
+      else if(strcmp(question_number,"2") == 0)
+      {
+        /* Question 2 - Start Here */
+        printf("==================== Question 1d ====================\n");
+        if(__STDC_VERSION__ == 199409)
+        printf("We are using C95!");
+        else if(__STDC_VERSION__ == 199901)
+        printf("We are using C99!");
+        else if(__STDC_VERSION__ == 201112)
+        printf("We are using C11!");
+        else if(__STDC_VERSION__ == 201710)
+        printf("We are using C17/C18!");
+        else if(__STDC_VERSION__ == 202311)
+        printf("We are using C23!");
+        printf("\n\n");
+        /* Question 2 - End Here */
       }
     }
   }
