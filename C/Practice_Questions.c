@@ -148,7 +148,7 @@ int main()
       else if(strcmp(question_number,"2") == 0)
       {
         /* Question 2 - Start Here */
-        printf("==================== Question 1d ====================\n");
+        printf("==================== Question 2 ====================\n");
         if(__STDC_VERSION__ == 199409)
         printf("We are using C95!");
         else if(__STDC_VERSION__ == 199901)
@@ -162,6 +162,81 @@ int main()
         printf("\n\n");
         /* Question 2 - End Here */
       }
+
+      else if(strcmp(question_number,"2a") == 0)
+      {
+        /* Question 2a - Start Here */
+        printf("==================== Question 2a ====================\n");
+        printf("Same Question as 2");
+        printf("\n\n");
+        /* Question 2a - End Here */
+      }
+
+      else if(strcmp(question_number,"2b") == 0)
+      {
+        /* Question 2b - Start Here */
+        printf("==================== Question 2b ====================\n");
+
+        #ifdef __GNUC__
+        {
+          printf("Compiler Name: GCC\n");
+          printf("Compiler Version: %d.%d.%d",__GNUC__,__GNUC_MINOR__,__GNUC_PATCHLEVEL__);
+        }
+        #endif
+        #ifdef __clang__
+        {
+          printf("Compiler Name: Clang\n");
+          printf("Compiler Version: %d.%d.%d",__clang_major__,__clang_minor__,__clang_patchlevel__);
+        }
+        #endif
+        #ifdef _MSC_VER
+        {
+          printf("Compiler Name: MSVC\n");
+          printf("Compiler Version: %d",_MSC_VER);
+        }
+        #endif
+        printf("\n\n");
+        /* Question 2b - End Here */
+      }
+
+      else if(strcmp(question_number,"2c") == 0)
+      {
+        /* Question 2c - Start Here */
+        printf("==================== Question 2c ====================\n");
+
+        if(__STDC_VERSION__ == 199901)
+        printf("This program is compiled under C99");
+        else if(__STDC_VERSION__ == 201112)
+        printf("This program is compiled under C11");
+        else if(__STDC_VERSION__ == 201710)
+        printf("This program is compiled under C18");
+        else
+        printf("This program is compiled under newer version of C");
+        /* Question 2c - End Here */
+      }
+
+      else if(strcmp(question_number,"2d") == 0)
+      {
+        /* Question 2d - Start Here */
+        printf("==================== Question 2d ====================\n");
+
+        if(__STDC_VERSION__ == 199409)
+        printf("C Version: C95\n");
+        else if(__STDC_VERSION__ == 199901)
+        printf("C Version: C99\n");
+        else if(__STDC_VERSION__ == 201112)
+        printf("C Version: C11\n");
+        else if(__STDC_VERSION__ == 201710)
+        printf("C Version: C17/C18\n");
+        else if(__STDC_VERSION__ == 202311)
+        printf("C Version: C23\n");
+        printf("Compilation Date: %s\n",__DATE__);
+        printf("Compilation Time: %s",__TIME__);
+        /* Question 2d - End Here */
+      }
+
+      else
+      printf("Invalid Question Number");
     }
   }
 }
