@@ -235,6 +235,90 @@ int main()
         /* Question 2d - End Here */
       }
 
+      else if(strcmp(question_number,"3") == 0)
+      {
+        /* Question 3 - Start Here */
+        printf("==================== Question 3 ====================\n");
+
+        printf("######\n");
+        printf("#\n");
+        printf("#\n");
+        printf("#####\n");
+        printf("#\n");
+        printf("#\n");
+        printf("#\n\n");
+        
+        printf("  #####\n");
+        printf("##     ##\n");
+        printf("#\n");
+        printf("#\n");
+        printf("##     ##\n");
+        printf("  #####");
+        /* Question 3 - End Here */
+      }
+
+      else if(strcmp(question_number,"3a") == 0)
+      {
+        /* Question 3a - Start Here */
+        printf("==================== Question 3a ====================\n");
+
+        printf("******\n");
+        printf("     *\n");
+        printf("     *\n");
+        printf(" *****\n");
+        printf("     *\n");
+        printf("     *\n");
+        printf("     *\n");
+        /* Question 3a - End Here */
+      }
+
+      else if(strcmp(question_number,"3b") == 0)
+      {
+        /* Question 3b - Start Here */
+        printf("==================== Question 3b ====================\n");
+
+        printf("     .............\n");
+        printf("     #############\n");
+        printf("     .............\n");
+        printf("  ...               ...\n");
+        printf("  ###               ###\n");
+        printf("  ...               ...\n");
+        printf(".#.\n");
+        printf(".#.\n");
+        printf(".#.\n");
+        printf(".#.\n");
+        printf(".#.\n");
+        printf(".#.\n");
+        printf("  ...               ...\n");
+        printf("  ###               ###\n");
+        printf("  ...               ...\n");
+        printf("     .............\n");
+        printf("     #############\n");
+        printf("     .............\n");
+        /* Question 3b - End Here */
+      }
+
+      else if(strcmp(question_number,"3c") == 0)
+      {
+        /* Question 3c - Start Here */
+        printf("==================== Question 3c ====================\n");
+
+        printf("*************\n");
+        printf("       *    *\n");
+        printf("       *    *\n");
+        printf("            *");
+        /* Question 3c - End Here */
+      }
+
+      else if(strcmp(question_number,"3d") == 0)
+      {
+        /* Question 3d - Start Here */
+        printf("==================== Question 3d ====================\n");
+
+        printf("Faltu ka Question hai");
+        /* Question 3d - End Here */
+      }
+
       else
       printf("Invalid Question Number");
     }
