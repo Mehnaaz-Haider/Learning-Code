@@ -319,6 +319,40 @@ int main()
         /* Question 3d - End Here */
       }
 
+      else if(strcmp(question_number,"4") == 0)
+      {
+        /* Question 4 - Start Here */
+        printf("==================== Question 4 ====================\n");
+
+        char x,y,z;
+
+        printf("Write 3 Characters:\n");
+        scanf(" %c%c%c",&x,&y,&z);
+
+        printf("Reverse of %c%c%c is %c%c%c",x,y,z,z,y,x);
+        /* Question 4 - End Here */
+      }
+
+      else if(strcmp(question_number,"5") == 0)
+      {
+        /* Question 5 - Start Here */
+        printf("==================== Question 5 ====================\n");
+
+        float l,b,area,perimeter;
+
+        printf("Length (in inches): ");
+        scanf("%f",&l);
+        printf("Breadth (in inches): ");
+        scanf("%f",&b);
+
+        area=l*b;
+        perimeter=2*(l+b);
+
+        printf("Area of Rectangle: %.2f square inch\n",area);
+        printf("Perimeter of Rectangle is: %.2f inch",perimeter);
+        /* Question 5 - End Here */
+      }
+
       else
       printf("Invalid Question Number");
     }
