@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 int main()
 {
@@ -46,7 +47,7 @@ int main()
              "Q3     Q3a     Q3b     Q3c     Q3d\n"
              "...    ...     ...     ...     ...\n\n");
       printf("Select Question: ");
-      scanf("%s",question_number);
+      scanf(" %s",question_number);
       printf("\n");
 
       if(strcmp(question_number,"1") == 0)
@@ -351,6 +352,249 @@ int main()
         printf("Area of Rectangle: %.2f square inch\n",area);
         printf("Perimeter of Rectangle is: %.2f inch",perimeter);
         /* Question 5 - End Here */
+      }
+
+      else if(strcmp(question_number,"5a") == 0)
+      {
+        /* Question 5a - Start Here */
+        printf("==================== Question 5a ====================\n");
+
+        float l,b,area,perimeter,diagonal;
+
+        printf("Length (in inches): ");
+        scanf("%f",&l);
+        printf("Breadth (in inches): ");
+        scanf("%f",&b);
+
+        area=l*b;
+        perimeter=2*(l+b);
+        diagonal=sqrt(l*l + b*b);
+
+        printf("Area of Rectangle: %.2f square inch\n",area);
+        printf("Perimeter of Rectangle is: %.2f inch\n",perimeter);
+        printf("Diagonal of Rectangle is: %.2f inch",diagonal);
+        /* Question 5a - End Here */
+      }
+
+      else if(strcmp(question_number,"5b") == 0)
+      {
+        /* Question 5b - Start Here */
+        printf("==================== Question 5b ====================\n");
+
+        double area,perimeter,Discriminant,l,b;
+
+        printf("Write Area of Rectangle (in square inches): ");
+        scanf("%lf",&area);
+        printf("Write Perimeter of Rectangle (in inches): ");
+        scanf("%lf",&perimeter);
+
+        Discriminant=(perimeter*perimeter) - (4*2*2*area);
+        if(Discriminant<0 || area<0 || perimeter<0)
+        printf("Input is invalid. No such rectangle ever exist! Please check Area or Perimeter.");
+        else if(Discriminant == 0 || Discriminant>0)
+        {
+          l=(perimeter+sqrt(Discriminant))/(2*2);
+          b=(perimeter-sqrt(Discriminant))/(2*2);
+          printf("Length: %.2lf\n",l);
+          printf("Breadth: %.2lf",b);
+        }
+        /* Question 5b - End Here */
+      }
+
+      else if(strcmp(question_number,"5c") == 0)
+      {
+        /* Question 5c - Start Here */
+        printf("==================== Question 5c ====================\n");
+
+        printf("Same as Question 5");
+        /* Question 5c - End Here */
+      }
+
+      else if(strcmp(question_number,"5d") == 0)
+      {
+        /* Question 5d - Start Here */
+        printf("==================== Question 5d ====================\n");
+
+        float l,b,area,perimeter;
+
+        printf("Length (in inches): ");
+        scanf("%f",&l);
+        printf("Breadth (in inches): ");
+        scanf("%f",&b);
+
+        if(l <= 0 || b <= 0)
+        printf("These Dimesions Does Not Make a Valid Rectangle!");
+        else
+        {
+          area=l*b;
+          perimeter=2*(l+b);
+          printf("Area of Rectangle: %.2f square inch\n",area);
+          printf("Perimeter of Rectangle is: %.2f inch",perimeter);
+        }
+        /* Question 5d - End Here */
+      }
+
+      else if(strcmp(question_number,"6") == 0)
+      {
+        /* Question 6 - Start Here */
+        printf("==================== Question 6 ====================\n");
+
+        float pie=3.14,r,area,perimeter;
+
+        printf("Radius: ");
+        scanf("%f",&r);
+
+        area=pie*r*r;
+        perimeter=2*pie*r;
+        printf("Area of Circle: %.2f\n",area);
+        printf("Perimeter of Circle: %.2f",perimeter);
+        /* Question 6 - End Here */
+      }
+
+      else if(strcmp(question_number,"6a") == 0)
+      {
+        /* Question 6a - Start Here */
+        printf("==================== Question 6a ====================\n");
+
+        float pie=3.14159,r,area,circumference;
+
+        printf("Radius: ");
+        scanf("%f",&r);
+
+        area=pie*r*r;
+        circumference=2*pie*r;
+        printf("Area of Circle: %.3f\n",area);
+        printf("Circumference of Circle: %.3f",circumference);
+        /* Question 6a - End Here */
+      }
+
+      else if(strcmp(question_number,"6b") == 0)
+      {
+        /* Question 6b - Start Here */
+        printf("==================== Question 6b ====================\n");
+
+        double area,r,pie=3.14159,circumference;
+
+        printf("Area of Circle: ");
+        scanf(" %lf",&area);
+
+        r=sqrt(area/pie);
+        circumference=2*pie*r;
+        printf("Radius: %.2lf\n",r);
+        printf("Circumference: %.2lf",circumference);
+        /* Question 6b - End Here */
+      }
+
+      else if(strcmp(question_number,"6c") == 0)
+      {
+        /* Question 6c - Start Here */
+        printf("==================== Question 6c ====================\n");
+
+        float pie=3.14159,area,perimeter,r;
+        int d;
+
+        printf("Diameter: ");
+        scanf("%d",&d);
+
+        r=(double)d/2;
+        area=pie*r*r;
+        perimeter=2*pie*r;
+        printf("Area of Circle: %.2f\n",area);
+        printf("Perimeter of Circle: %.2f",perimeter);
+        /* Question 6c - End Here */
+      }
+
+      else if(strcmp(question_number,"6d") == 0)
+      {
+        /* Question 6d - Start Here */
+        printf("==================== Question 6d ====================\n");
+
+        float pie=3.14159,r,area,perimeter;
+
+        printf("Radius: ");
+        scanf("%f",&r);
+
+        if(r <= 0)
+        printf("Invalid Radius!");
+        else
+        {
+          area=pie*r*r;
+          perimeter=2*pie*r;
+          printf("Area of Circle: %.2f\n",area);
+          printf("Perimeter of Circle: %.2f",perimeter);
+        }
+        /* Question 6d - End Here */
+      }
+
+      else if(strcmp(question_number,"7") == 0)
+      {
+        /* Question 7 - Start Here */
+        printf("==================== Question 7 ====================\n");
+
+        int a = 125, b = 12345;
+        long ax = 1234567890;
+        short s = 4043;
+        float x = 2.13459;
+        double dx = 1.1415927;
+        char c = 'W';
+        unsigned long ux = 2541567890;
+
+        printf("a + c = %d\n",a+c);
+        printf("x + c = %f\n",x+c);
+        printf("dx + x = %lf\n",dx+x);
+        printf("((int)dx) + ax = %ld\n",((int)dx)+ax);
+        printf("a + x = %f\n",a+x);
+        printf("s + b = %d\n",s+b);
+        printf("ax + b = %ld\n",ax+b);
+        printf("s + c = %d\n",s+c);
+        printf("ax + c = %ld\n",ax+c);
+        printf("ax + ux = %lu",ax+ux);
+        /* Question 7 - End Here */
+      }
+
+      else if(strcmp(question_number,"7a") == 0)
+      {
+        /* Question 7a - Start Here */
+        printf("==================== Question 7a ====================\n");
+
+        printf("Faltu Question");
+        /* Question 7a - End Here */
+      }
+
+      else if(strcmp(question_number,"7b") == 0)
+      {
+        /* Question 7b - Start Here */
+        printf("==================== Question 7b ====================\n");
+
+        printf("Faltu Question");
+        /* Question 7b - End Here */
+      }
+
+      else if(strcmp(question_number,"7d") == 0)
+      {
+        /* Question 7d - Start Here */
+        printf("==================== Question 7d ====================\n");
+
+        printf("Faltu Question");
+        /* Question 7d - End Here */
+      }
+
+      else if(strcmp(question_number,"8") == 0)
+      {
+        /* Question 8 - Start Here */
+        printf("==================== Question 8 ====================\n");
+
+        int x,years,weeks,days;
+
+        printf("Write Days: ");
+        scanf("%d",&x);
+
+        years=x/365;
+        weeks=(x%365)/7;
+        days=(x%365)%7;
+        
+        printf("%d Days = %d %s %d %s %d %s",x,years,(years==1 || years==0)?"year":"years",weeks,(weeks==1 || weeks==0)?"week":"weeks",days,(days==1 || days==0)?"day":"days");
+        /* Question 8 - End Here */
       }
 
       else
