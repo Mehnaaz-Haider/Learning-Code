@@ -597,6 +597,25 @@ int main()
         /* Question 8 - End Here */
       }
 
+      else if(strcmp(question_number,"8a") == 0)
+      {
+        /* Question 8a - Start Here */
+        printf("==================== Question 8a ====================\n");
+
+        double x;
+        int days,hours,minutes;
+
+        printf("Write hours: ");
+        scanf("%lf",&x);
+
+        days = (int)x/24;
+        hours = (int)x%24;
+        minutes = (int)((x-(int)x)*60);
+
+        printf("%lf hours = %d %s %d %s %d %s",x,days,(days == 0 || days == 1)?"day":"days",hours,(hours == 0 || hours == 1)?"hour":"hours",minutes,(minutes == 0 || minutes == 1)?"minute":"minutes");
+        /* Question 8a - End Here */
+      }
+
       else
       printf("Invalid Question Number");
     }
