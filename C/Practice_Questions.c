@@ -2,6 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <math.h>
+#include <limits.h>
 
 int main()
 {
@@ -614,6 +615,251 @@ int main()
 
         printf("%lf hours = %d %s %d %s %d %s",x,days,(days == 0 || days == 1)?"day":"days",hours,(hours == 0 || hours == 1)?"hour":"hours",minutes,(minutes == 0 || minutes == 1)?"minute":"minutes");
         /* Question 8a - End Here */
+      }
+
+      else if(strcmp(question_number,"8b") == 0)
+      {
+        /* Question 8b - Start Here */
+        printf("==================== Question 8b ====================\n");
+
+        int x,days,hours,minutes;
+
+        printf("Write Minutes: ");
+        scanf("%d",&x);
+
+        days = x/1440;
+        hours = (x%1440)/60;
+        minutes = (x%1440)%60;
+
+        printf("%d %s = %d %s %d %s %d %s",x,(x == 0 || x == 1)?"Minute":"Minutes",days,(days == 0 || days == 1)?"Day":"Days",hours,(hours == 0 || hours == 1)?"Hour":"Hours",minutes,(minutes == 0 || minutes == 1)?"Minute":"Minutes");
+        /* Question 8b - End Here */
+      }
+
+      else if(strcmp(question_number,"8c") == 0)
+      {
+        /* Question 8c - Start Here */
+        printf("==================== Question 8c ====================\n");
+
+        int x,days,hours,minutes,seconds;
+
+        printf("Write Seconds: ");
+        scanf("%d",&x);
+
+        days = x/86400;
+        hours = (x%86400)/3600;
+        minutes = ((x%86400)%3600)/60;
+        seconds = ((x%86400)%3600)%60;
+
+        printf("%d %s = %d %s %d %s %d %s %d %s",x,(x==0 || x==1)?"Second":"Seconds",days,(days==0 || days==1)?"Day":"Days",hours,(hours==0 || hours==1)?"Hour":"Hours",minutes,(minutes==0 || minutes==1)?"Minute":"Minutes",seconds,(seconds==0 || seconds==1)?"Second":"Seconds");
+        /* Question 8c - End Here */
+      }
+
+      else if(strcmp(question_number,"8d") == 0)
+      {
+        /* Question 8d - Start Here */
+        printf("==================== Question 8d ====================\n");
+
+        int x,months,days;
+
+        printf("Write Days: ");
+        scanf("%d",&x);
+
+        months = x/30;
+        days = x%30;
+
+        printf("%d %s = %d %s %d %s",x,(x==0 || x==1)?"Day":"Days",months,(months==0 || months==1)?"Month":"Months",days,(days==0 || days==1)?"Day":"Days");
+        /* Question 8d - End Here */
+      }
+
+      else if(strcmp(question_number,"9") == 0)
+      {
+        /* Question 9 - Start Here */
+        printf("==================== Question 9 ====================\n");
+
+        int x,y,z;
+
+        printf("Write Your First Integer: ");
+        scanf("%d",&x);
+        printf("Write Your Second Integer: ");
+        scanf("%d",&y);
+
+        z = x+y;
+
+        printf("Sum of the above two integers = %d",z);
+        /* Question 9 - End Here */
+      }
+
+      else if(strcmp(question_number,"9a") == 0)
+      {
+        /* Question 9a - Start Here */
+        printf("==================== Question 9a ====================\n");
+
+        int x,y,z,a;
+
+        printf("Write Your First Integer: ");
+        scanf("%d",&x);
+        printf("Write Your Second Integer: ");
+        scanf("%d",&y);
+
+        z = x+y;
+
+        printf("Sum of the above two integers = %d\n",z);
+        if(x>y)
+        {
+          a = x-y;
+          printf("Difference of the above two integers = %d",a);
+        }
+       else if(x<y)
+       {
+        a = y-x;
+        printf("Difference of the above two integers = %d",a);
+       }
+        /* Question 9a - End Here */
+      }
+
+      else if(strcmp(question_number,"9b") == 0)
+      {
+        /* Question 9b - Start Here */
+        printf("==================== Question 9b ====================\n");
+
+        int x,y,z,a;
+
+        printf("Write Your First Integer: ");
+        scanf("%d",&x);
+        printf("Write Your Second Integer: ");
+        scanf("%d",&y);
+        printf("Write Your Third Integer: ");
+        scanf("%d",&z);
+
+        a = x+y+z;
+
+        printf("Sum of the above three integers = %d",a);
+        /* Question 9b - End Here */
+      }
+
+      else if(strcmp(question_number,"9c") == 0)
+      {
+        /* Question 9c - Start Here */
+        printf("==================== Question 9c ====================\n");
+
+        int x,y,z;
+
+        printf("Write Two Integers:\n");
+
+        if(scanf("%d%d",&x,&y) != 2)
+        {
+          printf("Invalid Input!");
+          return 1;
+        }
+        else if(y>0 && x > INT_MAX - y)
+        {
+          printf("Error: Positive Overflow Detected!");
+          return 1;
+        }
+        else if(y<0 && x < INT_MIN - y)
+        {
+          printf("Error: Negative Overflow Detected!");
+          return 1;
+        }
+        else
+        {
+          z = x+y;
+          printf("Sum of two integers = %d",z);
+        }
+        return 0;
+        /* Question 9c - End Here */
+      }
+
+      else if(strcmp(question_number,"10") == 0)
+      {
+        /* Question 10 - Start Here */
+        printf("==================== Question 10 ====================\n");
+
+        int x,y,z;
+
+        printf("Write First Integer: ");
+        scanf("%d",&x);
+        printf("Write Second Integer: ");
+        scanf("%d",&y);
+
+        z = x*y;
+
+        printf("Product of the above two integers = %d",z);
+        /* Question 10 - End Here */
+      }
+
+      else if(strcmp(question_number,"10a") == 0)
+      {
+        /* Question 10a - Start Here */
+        printf("==================== Question 10a ====================\n");
+
+        int x,y,z,a;
+
+        printf("Write First Integer: ");
+        scanf("%d",&x);
+        printf("Write Second Integer: ");
+        scanf("%d",&y);
+        printf("Write Third Integer: ");
+        scanf("%d",&z);
+
+        a = x*y*z;
+
+        printf("Product of the above three integers = %d",a);
+        /* Question 10a - End Here */
+      }
+
+      else if(strcmp(question_number,"10c") == 0)
+      {
+        /* Question 10 c- Start Here */
+        printf("==================== Question 10c ====================\n");
+
+        int x,y,z,a;
+
+        printf("Write First Integer: ");
+        scanf("%d",&x);
+        printf("Write Second Integer: ");
+        scanf("%d",&y);
+
+        z = x*y;
+        a = x+y;
+
+        printf("Product of the above two integers = %d\n",z);
+        printf("Sum of the above two integers = %d",a);
+        /* Question 10c - End Here */
+      }
+
+      else if(strcmp(question_number,"11") == 0)
+      {
+        /* Question 11- Start Here */
+        printf("==================== Question 11 ====================\n");
+
+        float w1,w2,total_weight,avg_weight;
+        int n1,n2,total_items;
+
+        printf("Weight of first item: ");
+        scanf("%f",&w1);
+        printf("Weight of second item: ");
+        scanf("%f",&w2);
+        printf("Number of first item: ");
+        scanf("%d",&n1);
+        printf("Number of second item: ");
+        scanf("%d",&n2);
+
+        total_weight=(w1*n1)+(w2*n2);
+        total_items=n1+n2;
+        avg_weight=total_weight/total_items;
+
+        printf("Average Weight = %.2f",avg_weight);
+        /* Question 11 - End Here */
+      }
+
+      else if(strcmp(question_number,"11a") == 0)
+      {
+        /* Question 11a- Start Here */
+        printf("==================== Question 11a ====================\n");
+
+        printf("Same as Question 11");
+        /* Question 11a- End Here */
       }
 
       else
