@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <math.h>
 #include <limits.h>
+#include <windows.h>
 
 int main()
 {
@@ -862,8 +863,129 @@ int main()
         /* Question 11a- End Here */
       }
 
+      else if(strcmp(question_number,"11d") == 0)
+      {
+        /* Question 11d- Start Here */
+        printf("==================== Question 11d ====================\n");
+
+        float total_weight,total_cost,avg_price;
+
+        printf("Total Weight: ");
+        scanf("%f",&total_weight);
+        printf("Total Cost: ");
+        scanf("%f",&total_cost);
+
+        avg_price = total_cost/total_weight;
+
+        printf("Average Price Per Unit Weight = %.2f",avg_price);
+        return 0;
+        /* Question 11d- End Here */
+      }
+
+      else if(strcmp(question_number,"12") == 0)
+      {
+        /* Question 12- Start Here */
+        printf("==================== Question 12 ====================\n");
+
+        
+        float total_hours,salary_per_hour,salary;
+        int emp_id;
+
+        printf("Employee ID: ");
+        scanf("%d",&emp_id);
+        printf("Total worked hours in a month: ");
+        scanf("%f",&total_hours);
+        printf("Amount received per hour: ");
+        scanf("%f",&salary_per_hour);
+
+        salary = salary_per_hour*total_hours;
+
+        printf("Employee ID = %d\n",emp_id);
+        printf("Salary = U$ %.2f",salary);
+        return 0;
+        /* Question 12- End Here */
+      }
+
+      else if(strcmp(question_number,"12a") == 0)
+      {
+        /* Question 12a - Start Here */
+        printf("==================== Question 12a ====================\n");
+
+        float total_hours,hourly_rate,regular_salary,overtime_hours,overtime_salary,gross_salary;
+
+        printf("Total Worked Hours: ");
+        scanf("%f",&total_hours);
+        printf("Hourly Rate: ");
+        scanf("%f",&hourly_rate);
+
+        if(total_hours <= 160) // Assuming Standard 40 hours per week, so 160 hrs per month
+        {
+          regular_salary = total_hours * hourly_rate;
+          printf("Gross Salary = %.2f",regular_salary);
+          return 0;
+        }
+        else if(total_hours > 160)
+        {
+          overtime_hours = total_hours - 160;
+          regular_salary = 160 * hourly_rate;
+          overtime_salary = overtime_hours * (2*hourly_rate); // Assuming overtime rate double the regular hourly rate
+          gross_salary = regular_salary + overtime_salary;
+
+          printf("Gross Salary = %.2f",gross_salary);
+          return 0;
+        }
+        /* Question 12a - End Here */
+      }
+
       else
       printf("Invalid Question Number");
+    }
+    break;
+    case 2:
+    {
+      printf("Chapter 2 Code Will Be Written Here");
+    }
+    break;
+    case 3:
+    {
+      printf("Chapter 3 Code Will Be Written Here");
+    }
+    break;
+    case 4:
+    {
+      printf("Chapter 4 Code Will Be Written Here");
+    }
+    break;
+    case 5:
+    {
+      char question_number[3];
+
+      printf("========== Select Question from Chapter: Input-Output ==========\n");
+      printf("Q1     Q1a     Q1b     Q1c     Q1d\n"
+             "Q2     Q2a     Q2b     Q2c     Q2d\n"
+             "Q3     Q3a     Q3b     Q3c     Q3d\n"
+             "...    ...     ...     ...     ...\n\n");
+      printf("Select Question: ");
+      scanf(" %s",question_number);
+      printf("\n");
+
+      if(strcmp(question_number,"1") == 0)
+      {
+        /* Question 1 - Start Here */
+        printf("==================== Question 1 ====================\n");
+        
+        SetConsoleCP(65001);
+        float C,F;
+
+        printf("Input a temperature (in Centigrade): ");
+        scanf("%f",&C);
+
+        F = (C*1.8)+32;
+
+        printf("Temperature in Fahrenheit = %.2f°F",F);
+        return 0;
+        /* Question 1 - End Here */
+      }
     }
   }
 }
