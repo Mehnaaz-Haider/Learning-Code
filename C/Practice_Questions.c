@@ -18,9 +18,10 @@ int main()
   printf("\n\n");
 
   switch(platform_choice)
-  case 1:
   {
-    int chapter_choice;
+    case 1:
+    {
+      int chapter_choice;
 
     printf("==================== Select Chapter inside W3Resource ====================\n");
     printf("(1) Basic Declerations and Expressions     (2) Basic Part-II          (3) Basic Algorithm\n"
@@ -39,9 +40,10 @@ int main()
     printf("\n\n");
 
     switch(chapter_choice)
-    case 1:
-    {
-      char question_number[3];
+      {
+        case 1:
+        {
+          char question_number[3];
 
       printf("========== Select Question from Chapter - Basic Declarations and Expressions ==========\n");
       printf("Q1     Q1a     Q1b     Q1c     Q1d\n"
@@ -970,11 +972,11 @@ int main()
       printf("\n");
 
       if(strcmp(question_number,"1") == 0)
-      {
-        /* Question 1 - Start Here */
+          {
+            /* Question 1 - Start Here */
         printf("==================== Question 1 ====================\n");
         
-        SetConsoleCP(65001);
+        SetConsoleOutputCP(65001);
         float C,F;
 
         printf("Input a temperature (in Centigrade): ");
@@ -985,6 +987,8 @@ int main()
         printf("Temperature in Fahrenheit = %.2f°F",F);
         return 0;
         /* Question 1 - End Here */
+          }
+        }
       }
     }
   }

@@ -7,12 +7,14 @@ int main()
     int choice;
 
     printf("=========== All Questions ===========\n\n");
-    printf("Q1     Q2     Q3     Q4     Q5\nQ6     Q7     Q8     Q9     Q10\nQ11     Q12     Q13     Q14     Q15\nQ16     Q17     Q18     Q19     Q20\n\n");
-    printf("Select Your Question Number (1-15): ");
+    printf("Q1     Q2     Q3     Q4     Q5\n"
+           "Q6     Q7     Q8     Q9     Q10\n"
+           "..     ..     ..     ..     ...\n\n");
+    printf("Select Your Question Number: ");
     scanf("%d",&choice);
     printf("\n\n");
 
-    /* Insert Your Choice - Code Start*/
+    /* Insert Your Choice - Code End*/
 
     if(choice == 1)
     {
@@ -489,6 +491,58 @@ int main()
         }
         printf("\n\n");
         /* Greatest of 3 using switch-case (Question 16) - End Here */
+    }
+
+    else if(choice == 17)
+    {
+        /* Counting using while loop (Question 17) - Start Here */
+        printf("==================== Question 17 ====================\n");
+
+        int x=1;
+
+        while(x <= 10)
+        {
+          printf("%d\n",x);
+          x++;
+        }
+        return 0;
+        /* Counting using while loop (Question 17) - End Here */
+    }
+
+    else if(choice == 18)
+    {
+        /* Counting using while loop with different method (Question 18) - Start Here */
+        printf("==================== Question 18 ====================\n");
+
+        int x=1;
+
+        while(x++ <= 10)
+          printf("%d\n",x);
+          printf("%d",x);
+        return 0;
+        /* Counting using while loop with different method (Question 18) - End Here */
+    }
+
+    else if(choice == 19)
+    {
+        /* Sum of n numbers using while loop (Question 19) - Start Here */
+        printf("==================== Question 19 ====================\n");
+
+        long long int n,m,x;
+
+        printf("Write a natural number: ");
+        scanf("%lld",&n);
+
+        m=n;
+        x=n;
+        while(n>1)
+        {
+            m = m + (n-1);
+            n--;
+        }
+        printf("Sum of first %lld natural number = %lld",x,m);
+        return 0;
+        /* Sum of n numbers using while loop (Question 19) - End Here */
     }
     else printf("invalid choice");
 }
