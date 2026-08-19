@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <windows.h>
 
 int main()
 {
@@ -525,7 +526,7 @@ int main()
 
     else if(choice == 19)
     {
-        /* Sum of n numbers using while loop (Question 19) - Start Here */
+        /* Sum of first n natural numbers using while loop (Question 19) - Start Here */
         printf("==================== Question 19 ====================\n");
 
         long long int n,m,x;
@@ -542,7 +543,199 @@ int main()
         }
         printf("Sum of first %lld natural number = %lld",x,m);
         return 0;
-        /* Sum of n numbers using while loop (Question 19) - End Here */
+        /* Sum of first n natural numbers using while loop (Question 19) - End Here */
+    }
+
+    else if(choice == 20)
+    {
+        /* Sum of first n natural numbers without using while loop (Question 20) - Start Here */
+        printf("==================== Question 20 ====================\n");
+
+        long long int n,m;
+
+        printf("Write a natural number: ");
+        scanf("%lld",&n);
+
+        m = (n*(n+1))/2; // Using Mathematical Formula.
+
+        printf("Sum of first %lld natural number = %lld",n,m);
+        return 0;
+        /* Sum of first n natural numbers without using while loop (Question 20) - End Here */
+    }
+
+    else if(choice == 21)
+    {
+        /* Sum of first n even natural numbers using while loop (Question 21) - Start Here */
+        printf("==================== Question 21 ====================\n");
+
+        long long int n,m,x;
+
+        printf("Write a natural number: ");
+        scanf("%lld",&n);
+
+        x=n;
+        if(n%2 == 0)
+        {
+            m=n;
+            while(n>1)
+            {
+                while(n%2 == 0)
+                {
+                    m = m + (n-2);
+                    n--;
+                }
+                n--;
+            }
+            printf("Sum of first %lld even natural number = %lld",x,m);
+        }
+        else
+        {
+            m=n-1;
+            while(n>1)
+            {
+                while(n%2 == 0)
+                {
+                    m = m + (n-2);
+                    n--;
+                }
+                n--;
+            }
+            printf("Sum of first %lld even natural number = %lld",x,m);
+        }
+        return 0;
+        /* Sum of first n even natural numbers using while loop (Question 21) - End Here */
+    }
+
+    else if(choice == 22)
+    {
+        /* Sum of first n even natural numbers using while loop (Question 22) - Start Here */
+        printf("==================== Question 22 ====================\n");
+
+        long long int n,m,x,y;
+
+        printf("Write a natural number: ");
+        scanf ("%lld",&n);
+
+        m=0;
+        x=0;
+        y=0;
+        while(x != n)
+        {
+            m = m + (y+2);
+            y=y+2;
+            x++;
+        }
+        printf("Sum of first %lld even natural number = %lld",n,m);
+        return 0;
+        /* Sum of first n even natural numbers using while loop (Question 22) - End Here */
+    }
+
+    else if(choice == 23)
+    {
+        /* Sum of first n even natural numbers without using while loop (Question 23) - Start Here */
+        printf("==================== Question 23 ====================\n");
+
+        long long int n,m;
+
+        printf("Write a natural number: ");
+        scanf("%lld",&n);
+
+        m = n*(n+1); // Mathematical Formula.
+
+        printf("Sum of first %lld even natural number = %lld",n,m);
+        return 0;
+        /* Sum of first n even natural numbers without using while loop (Question 23) - End Here */
+    }
+
+    else if(choice == 24)
+    {
+        /* Sum of first n odd natural numbers using while loop (Question 24) - Start Here */
+        printf("==================== Question 24 ====================\n");
+
+        long long int n,m,x,y;
+
+        printf("Write a natural number: ");
+        scanf ("%lld",&n);
+
+        m=0;
+        x=0;
+        y=0;
+        while(x != n)
+        {
+            m = m + (y+1);
+            y=y+2;
+            x++;
+        }
+        printf("Sum of first %lld odd natural number = %lld",n,m);
+        return 0;
+        /* Sum of first n odd natural numbers using while loop (Question 24) - End Here */
+    }
+
+    else if(choice == 25)
+    {
+        /* Sum of first n odd natural numbers without using while loop (Question 25) - Start Here */
+        printf("==================== Question 25 ====================\n");
+
+        long long int n,m;
+
+        printf("Write a natural number: ");
+        scanf("%lld",&n);
+
+        m = n*n; // Mathematical Formula.
+
+        printf("Sum of first %lld odd natural number = %lld",n,m);
+        return 0;
+        /* Sum of first n odd natural numbers without using while loop (Question 25) - End Here */
+    }
+
+    else if(choice == 26)
+    {
+        /* Times Table using while loop (Question 26) - Start Here */
+        printf("==================== Question 26 ====================\n");
+
+        SetConsoleOutputCP(65001);
+        long long int n,m;
+        int x;
+
+        printf("Write a number: ");
+        scanf("%lld",&n);
+
+        x=1;
+        while(x <= 10)
+        {
+            m=n*x;
+            printf("%lld × %d = %lld\n",n,x,m);
+            x++;
+        }
+        return 0;
+        /* Times Table using while loop (Question 26) - End Here */
+    }
+
+    else if(choice == 27)
+    {
+        /* Factorial using while loop (Question 27) - Start Here */
+        printf("==================== Question 27 ====================\n");
+
+        long long int n,m,x;
+
+        printf("Write a number: ");
+        scanf("%lld",&n);
+
+        if(n != 0)
+        {
+        m=n;
+        x=n;
+        while(n>1)
+        {
+            m = m*(n-1);
+            n--;
+        }
+        printf("%lld! = %lld",x,m);
+        }
+        else if(n == 0)
+        printf("%lld! = 1",n);
+        return 0;
+        /* Factorial using while loop (Question 27) - End Here */
     }
     else printf("invalid choice");
 }
