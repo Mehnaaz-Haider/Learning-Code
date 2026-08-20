@@ -763,5 +763,61 @@ int main()
         return 0;
         /* Counting using For Loop (Question 29) - End Here */
     }
+
+    else if(choice == 30)
+    {
+        /* Times Table using Nested For Loop (Question 30) - Start Here */
+        printf("==================== Question 30 ====================\n");
+
+        SetConsoleOutputCP(65001);
+        int i,j,m;
+
+        for(i=1; i <= 10; i++)
+        {
+            for(j=1; j <= 10; j++)
+            {
+                m = i*j;
+                printf("%d × %d = %d\n",i,j,m);
+            }
+        }
+        return 0;
+        /* Times Table using Nested For Loop (Question 30) - End Here */
+    }
+
+    else if(choice == 31)
+    {
+        /* Times Table using Nested For Loop (Question 31) - Start Here */
+        printf("==================== Question 31 ====================\n");
+
+        SetConsoleOutputCP(65001);
+        int i,j,m;
+
+        for(i=1; i <= 10; i++)
+        {
+            for(j=1; j <= 3; j++)
+            {
+               m=j*i;
+               printf("%d × %d = %d\t",j,i,m);
+            }
+        }
+        for(i=1; i <= 10; i++)
+        {
+            for(j=4; j <= 6; j++)
+            {
+               m=j*i;
+               printf("%d × %d = %d\t",j,i,m);
+            }
+        }
+        for(i=1; i <= 10; i++)
+        {
+            for(j=7; j <= 10; j++)
+            {
+               m=j*i;
+               printf("%d × %d = %d\t",j,i,m);
+            }
+        }
+        return 0;
+        /* Times Table using Nested For Loop (Question 31) - End Here */
+    }
     else printf("invalid choice");
 }
