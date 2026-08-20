@@ -737,5 +737,31 @@ int main()
         return 0;
         /* Factorial using while loop (Question 27) - End Here */
     }
+
+    else if(choice == 28)
+    {
+        /* Print abc using For Loop (Question 28) - Start Here */
+        printf("==================== Question 28 ====================\n");
+
+        int x;
+
+        for(x=1; x <= 10; x++)
+        printf("abc\n");
+        return 0;
+        /* Print abc using For Loop (Question 28) - End Here */
+    }
+
+    else if(choice == 29)
+    {
+        /* Counting using For Loop (Question 29) - Start Here */
+        printf("==================== Question 29 ====================\n");
+
+        int x;
+
+        for(x=1; x <= 10; x++)
+        printf("%d\n",x);
+        return 0;
+        /* Counting using For Loop (Question 29) - End Here */
+    }
     else printf("invalid choice");
 }
