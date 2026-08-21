@@ -1,23 +1,24 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <windows.h>
+#include <string.h>
 
 int main()
 {
     /* Insert Your Choice - Code Start*/
-    int choice;
+    char choice[5];
 
     printf("=========== All Questions ===========\n\n");
     printf("Q1     Q2     Q3     Q4     Q5\n"
            "Q6     Q7     Q8     Q9     Q10\n"
            "..     ..     ..     ..     ...\n\n");
     printf("Select Your Question Number: ");
-    scanf("%d",&choice);
+    scanf(" %s",&choice);
     printf("\n\n");
 
     /* Insert Your Choice - Code End*/
 
-    if(choice == 1)
+    if(strcmp(choice,"1") == 0)
     {
         /* Pass or Fail (Question 1) - Start Here */
         int M1,M2;
@@ -41,7 +42,7 @@ int main()
         /* Pass or Fail (Question 1) - End Here */
     }
 
-    else if(choice == 2)
+    else if(strcmp(choice,"2") == 0)
     {
         /* Pass or Fail (Question 2) - Start Here */
         int M1,M2,M3;
@@ -87,7 +88,7 @@ int main()
         /* Pass or Fail (Question 2) - End Here */
     }
 
-    else if(choice == 3)
+    else if(strcmp(choice,"3") == 0)
     {
         /* Greatest of 3 using nested if (Question 3) - Start Here */
         int x,y,z;
@@ -114,7 +115,7 @@ int main()
         /* Greatest of 3 using nested if (Question 3) - End Here */
     }
 
-    else if(choice == 4)
+    else if(strcmp(choice,"4") == 0)
     {
         /* Greatest of 4 using nested if (Question 4) - Start Here */
         int a,b,c,d;
@@ -161,7 +162,7 @@ int main()
         /* Greatest of 4 using nested if (Question 4) - End Here */
     }
 
-    else if(choice == 5)
+    else if(strcmp(choice,"5") == 0)
     {
         /* Pass or Fail using Logical Operator (Question 5) - Start Here */
         printf("==================== ");
@@ -183,7 +184,7 @@ int main()
         /* Pass or Fail using Logical Operator (Question 5) - End Here */
     }
 
-    else if(choice == 6)
+    else if(strcmp(choice,"6") == 0)
     {
         /* Pass or Fail using Logical Operator (Question 6) - Start Here */
         printf("==================== ");
@@ -211,7 +212,7 @@ int main()
         /* Pass or Fail using Logical Operator (Question 6) - End Here */
     }
 
-    else if(choice == 7)
+    else if(strcmp(choice,"7") == 0)
     {
         /* Pass or Fail using Conditional Operator (Question 7) - Start Here */
         printf("==================== ");
@@ -235,7 +236,7 @@ int main()
         /* Pass or Fail using Conditional Operator (Question 7) - End Here */
     }
 
-    else if(choice == 8)
+    else if(strcmp(choice,"8") == 0)
     {
         /* Pass or Fail using Count Variable (Question 8) - Start Here */
         printf("==================== ");
@@ -268,7 +269,7 @@ int main()
         /* Pass or Fail using Count Variable (Question 8) - End Here */
     }
 
-    else if(choice == 9)
+    else if(strcmp(choice,"9") == 0)
     {
         /* Grade using else-if (Question 9) - Start Here */
         printf("==================== ");
@@ -294,7 +295,7 @@ int main()
         /* Grade using else-if (Question 9) - End Here */
     }
 
-    else if(choice == 10)
+    else if(strcmp(choice,"10") == 0)
     {
         /* Print Vowel using Switch-Case (Question 10) - Start Here */
         printf("==================== ");
@@ -322,7 +323,7 @@ int main()
         /* Print Vowel using Switch-Case (Question 10) - End Here */
     }
 
-    else if(choice == 11)
+    else if(strcmp(choice,"11") == 0)
     {
         /* toupper code (Question 11) - Start Here */
         printf("==================== ");
@@ -343,7 +344,7 @@ int main()
         /* toupper code (Question 11) - End Here */
     }
 
-    else if(choice == 12)
+    else if(strcmp(choice,"12") == 0)
     {
         /* tolower code (Question 12) - Start Here */
         printf("==================== ");
@@ -364,7 +365,7 @@ int main()
         /* tolower code (Question 12) - End Here */
     }
 
-    else if(choice == 13)
+    else if(strcmp(choice,"13") == 0)
     {
         /* Grade using switch-case (Question 13) - Start Here */
         printf("==================== ");
@@ -397,7 +398,7 @@ int main()
         /* Grade using switch-case (Question 13) - End Here */
     }
 
-    else if(choice == 14)
+    else if(strcmp(choice,"14") == 0)
     {
         /* Grade using switch-case (Question 14) - Start Here */
         printf("==================== ");
@@ -432,7 +433,7 @@ int main()
         /* Grade using switch-case (Question 14) - End Here */
     }
 
-    else if(choice == 15)
+    else if(strcmp(choice,"15") == 0)
     {
         /* Greatest of 2 using switch-case (Question 15) - Start Here */
         printf("==================== ");
@@ -456,7 +457,7 @@ int main()
         /* Greatest of 2 using switch-case (Question 15) - End Here */
     }
 
-    else if(choice == 16)
+    else if(strcmp(choice,"16") == 0)
     {
         /* Greatest of 3 using switch-case (Question 16) - Start Here */
         printf("==================== ");
@@ -494,7 +495,7 @@ int main()
         /* Greatest of 3 using switch-case (Question 16) - End Here */
     }
 
-    else if(choice == 17)
+    else if(strcmp(choice,"17") == 0)
     {
         /* Counting using while loop (Question 17) - Start Here */
         printf("==================== Question 17 ====================\n");
@@ -510,7 +511,7 @@ int main()
         /* Counting using while loop (Question 17) - End Here */
     }
 
-    else if(choice == 18)
+    else if(strcmp(choice,"18") == 0)
     {
         /* Counting using while loop with different method (Question 18) - Start Here */
         printf("==================== Question 18 ====================\n");
@@ -524,7 +525,7 @@ int main()
         /* Counting using while loop with different method (Question 18) - End Here */
     }
 
-    else if(choice == 19)
+    else if(strcmp(choice,"19") == 0)
     {
         /* Sum of first n natural numbers using while loop (Question 19) - Start Here */
         printf("==================== Question 19 ====================\n");
@@ -546,7 +547,7 @@ int main()
         /* Sum of first n natural numbers using while loop (Question 19) - End Here */
     }
 
-    else if(choice == 20)
+    else if(strcmp(choice,"20") == 0)
     {
         /* Sum of first n natural numbers without using while loop (Question 20) - Start Here */
         printf("==================== Question 20 ====================\n");
@@ -563,7 +564,7 @@ int main()
         /* Sum of first n natural numbers without using while loop (Question 20) - End Here */
     }
 
-    else if(choice == 21)
+    else if(strcmp(choice,"21") == 0)
     {
         /* Sum of first n even natural numbers using while loop (Question 21) - Start Here */
         printf("==================== Question 21 ====================\n");
@@ -606,7 +607,7 @@ int main()
         /* Sum of first n even natural numbers using while loop (Question 21) - End Here */
     }
 
-    else if(choice == 22)
+    else if(strcmp(choice,"22") == 0)
     {
         /* Sum of first n even natural numbers using while loop (Question 22) - Start Here */
         printf("==================== Question 22 ====================\n");
@@ -630,7 +631,7 @@ int main()
         /* Sum of first n even natural numbers using while loop (Question 22) - End Here */
     }
 
-    else if(choice == 23)
+    else if(strcmp(choice,"23") == 0)
     {
         /* Sum of first n even natural numbers without using while loop (Question 23) - Start Here */
         printf("==================== Question 23 ====================\n");
@@ -647,7 +648,7 @@ int main()
         /* Sum of first n even natural numbers without using while loop (Question 23) - End Here */
     }
 
-    else if(choice == 24)
+    else if(strcmp(choice,"24") == 0)
     {
         /* Sum of first n odd natural numbers using while loop (Question 24) - Start Here */
         printf("==================== Question 24 ====================\n");
@@ -671,7 +672,7 @@ int main()
         /* Sum of first n odd natural numbers using while loop (Question 24) - End Here */
     }
 
-    else if(choice == 25)
+    else if(strcmp(choice,"25") == 0)
     {
         /* Sum of first n odd natural numbers without using while loop (Question 25) - Start Here */
         printf("==================== Question 25 ====================\n");
@@ -688,7 +689,7 @@ int main()
         /* Sum of first n odd natural numbers without using while loop (Question 25) - End Here */
     }
 
-    else if(choice == 26)
+    else if(strcmp(choice,"26") == 0)
     {
         /* Times Table using while loop (Question 26) - Start Here */
         printf("==================== Question 26 ====================\n");
@@ -711,7 +712,7 @@ int main()
         /* Times Table using while loop (Question 26) - End Here */
     }
 
-    else if(choice == 27)
+    else if(strcmp(choice,"27") == 0)
     {
         /* Factorial using while loop (Question 27) - Start Here */
         printf("==================== Question 27 ====================\n");
@@ -738,7 +739,7 @@ int main()
         /* Factorial using while loop (Question 27) - End Here */
     }
 
-    else if(choice == 28)
+    else if(strcmp(choice,"28") == 0)
     {
         /* Print abc using For Loop (Question 28) - Start Here */
         printf("==================== Question 28 ====================\n");
@@ -751,7 +752,7 @@ int main()
         /* Print abc using For Loop (Question 28) - End Here */
     }
 
-    else if(choice == 29)
+    else if(strcmp(choice,"29") == 0)
     {
         /* Counting using For Loop (Question 29) - Start Here */
         printf("==================== Question 29 ====================\n");
@@ -764,7 +765,7 @@ int main()
         /* Counting using For Loop (Question 29) - End Here */
     }
 
-    else if(choice == 30)
+    else if(strcmp(choice,"30") == 0)
     {
         /* Times Table using Nested For Loop (Question 30) - Start Here */
         printf("==================== Question 30 ====================\n");
@@ -784,7 +785,7 @@ int main()
         /* Times Table using Nested For Loop (Question 30) - End Here */
     }
 
-    else if(choice == 31)
+    else if(strcmp(choice,"31") == 0)
     {
         /* Times Table using Nested For Loop (Question 31) - Start Here */
         printf("==================== Question 31 ====================\n");
@@ -799,7 +800,9 @@ int main()
                m=j*i;
                printf("%d × %d = %d\t",j,i,m);
             }
+            printf("\n");
         }
+        printf("\n");
         for(i=1; i <= 10; i++)
         {
             for(j=4; j <= 6; j++)
@@ -807,7 +810,9 @@ int main()
                m=j*i;
                printf("%d × %d = %d\t",j,i,m);
             }
+            printf("\n");
         }
+        printf("\n");
         for(i=1; i <= 10; i++)
         {
             for(j=7; j <= 10; j++)
@@ -815,9 +820,86 @@ int main()
                m=j*i;
                printf("%d × %d = %d\t",j,i,m);
             }
+            printf("\n");
         }
         return 0;
         /* Times Table using Nested For Loop (Question 31) - End Here */
+    }
+
+    else if(strcmp(choice,"32") == 0)
+    {
+        /* Sum of digits using while loop (Question 32) - Start Here */
+        printf("==================== Question 32 ====================\n");
+
+        long long int n,m,x;
+
+        printf("Write an integer: ");
+        scanf("%lld",&n);
+
+        x=n;
+        m=0;
+        if(n/10 == 0)
+        printf("Sum of single digit can't be estimated!");
+        else
+        {
+           while(n != 0)
+        {
+            m = m + (n%10);
+            n = n/10;
+        }
+        printf("Sum of digits of %lld = %lld",x,m);
+        }
+        return 0;
+        /* Sum of digits using while loop (Question 32) - End Here */
+    }
+
+    else if(strcmp(choice,"32a") == 0)
+    {
+        /* Sum of digits using do-while loop (Question 32a) - Start Here */
+        printf("==================== Question 32a ====================\n");
+
+        long long int n,m,x;
+
+        printf("Write an integer: ");
+        scanf("%lld",&n);
+
+        x=n;
+        m=0;
+        if(n/10 == 0)
+        printf("Sum of single digit can't be estimated!");
+        else
+        {
+           do
+        {
+            m = m + (n%10);
+            n = n/10;
+        } while(n != 0);
+        printf("Sum of digits of %lld = %lld",x,m);
+        }
+        return 0;
+        /* Sum of digits using do-while loop (Question 32a) - End Here */
+    }
+
+    else if(strcmp(choice,"32b") == 0)
+    {
+        /* Sum of digits using for loop (Question 32b) - Start Here */
+        printf("==================== Question 32b ====================\n");
+
+        long long int n,m,x;
+
+        printf("Write an integer: ");
+        scanf(" %lld",&n);
+
+        if(n/10 == 0)
+        printf("Sum of single digit can't be estimated!");
+        else
+        {
+           for(x=n,m=0; n != 0; n=n/10)
+           m = m + (n%10);
+           printf("Sum of the digits of %lld = %lld",x,m);
+        }
+        return 0;
+        /* Sum of digits using for loop (Question 32b) - End Here */
     }
     else printf("invalid choice");
 }
