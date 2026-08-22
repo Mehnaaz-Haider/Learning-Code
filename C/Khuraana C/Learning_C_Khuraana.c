@@ -901,5 +901,49 @@ int main()
         return 0;
         /* Sum of digits using for loop (Question 32b) - End Here */
     }
+
+    else if(strcmp(choice,"33") == 0)
+    {
+        /* Check Prime Number (Question 33) - Start Here */
+        printf("==================== Question 33 ====================\n");
+
+        long long int n,m;
+
+        printf("Write a Number: ");
+        scanf("%lld",&n);
+
+        for(m=2; m <= n/2; m++)
+        {
+            if(n%m == 0)
+            break;
+        }
+        if(m == n/2 + 1)
+        printf("%lld is a Prime Number",n);
+        else
+        printf("%lld is not a Prime Number",n);
+        return 0;
+        /* Check Prime Number (Question 33) - End Here */
+    }
+
+    else if(strcmp(choice,"34") == 0)
+    {
+        /* Print Prime Numbers (Question 34) - Start Here */
+        printf("==================== Question 34 ====================\n");
+
+        int n,m;
+
+        for(n=1; n <= 500; n++)
+        {
+            for(m=2; m <= n/2; m++)
+            {
+                if(n%m == 0)
+                break;
+            }
+            if(m == n/2 + 1)
+            printf("%d\n",n);
+        }
+        return 0;
+        /* Print Prime Numbers (Question 34) - End Here */
+    }
     else printf("invalid choice");
 }
