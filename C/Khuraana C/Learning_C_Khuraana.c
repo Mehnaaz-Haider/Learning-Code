@@ -945,5 +945,24 @@ int main()
         return 0;
         /* Print Prime Numbers (Question 34) - End Here */
     }
+
+    else if(strcmp(choice,"35") == 0)
+    {
+        /* Pattern Printing (Question 35) - Start Here */
+        printf("==================== Question 35 ====================\n");
+
+        int l,c,x=1;
+
+        for(l=1; l <= 4; l++)
+        {
+            for(c=1; c <= l; c++)
+            {
+                printf("%d",x++);
+            }
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35) - End Here */
+    }
     else printf("invalid choice");
 }
