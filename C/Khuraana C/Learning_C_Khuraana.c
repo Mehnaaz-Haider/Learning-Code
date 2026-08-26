@@ -1057,5 +1057,102 @@ int main()
         return 0;
         /* Pattern Printing (Question 35e) - End Here */
     }
+
+    else if(strcmp(choice,"35f") == 0)
+    {
+        /* Pattern Printing (Question 35f) - Start Here */
+        printf("==================== Question 35f ====================\n");
+
+        int l,s,c;
+
+        for(l=1; l <= 7; l++)
+        {
+            for(s=2; s <= l && l <= 4; s++)
+            printf(" ");
+            for(c=4; c >= l && l <= 4; c--)
+            printf("1");
+            for(s=6; s >= l && l > 4; s--)
+            printf(" ");
+            for(c=4; c <= l && l > 4; c++)
+            printf("1");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35f) - End Here */
+    }
+
+    else if(strcmp(choice,"35g") == 0)
+    {
+        /* Pattern Printing (Question 35g) - Start Here */
+        printf("==================== Question 35g ====================\n");
+
+        int l,c,s,y=5;
+
+        for(l=1; l <= 4; l++)
+        {
+            for(c=1; c <= l; c++)
+            printf("1");
+            for(s=y; s >= l; s--)
+            printf(" ");
+            y--;
+            for(c=1; c <= l && l <= 3; c++)
+            printf("1");
+            for(c=2; c <= l && l >3; c++)
+            printf("1");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35g) - End Here */
+    }
+
+    else if(strcmp(choice,"35h") == 0)
+    {
+        /* Pattern Printing (Question 35h) - Start Here */
+        printf("==================== Question 35h ====================\n");
+
+        int l,s,c,y=3;
+
+        for(l=1; l <= 4; l++)
+        {
+            for(c=4; c >= l; c--)
+            printf("1");
+            for(s=y; s <= l; s++)
+            printf(" ");
+            y--;
+            for(c=3; c >= l && l == 1; c--)
+            printf("1");
+            for(c=4; c >= l && l > 1; c--)
+            printf("1");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35h) - End Here */
+    }
+
+    else if(strcmp(choice,"35i") == 0)
+    {
+        /* Pattern Printing (Question 35i) - Start Here */
+        printf("==================== Question 35i ====================\n");
+
+        int l,s,x=103,y=3,z=102;
+        char c;
+
+        for(l=1; l <= 7; l++)
+        {
+            for(c=97; c <= x; c++)
+            printf("%c",c);
+            x--;
+            for(s=y; s <= l; s++)
+            printf(" ");
+            y--;
+            for(c=z; c >= 97; c--)
+            printf("%c",c);
+            if(l != 1)
+            z--;
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35i) - End Here */
+    }
     else printf("invalid choice");
 }
