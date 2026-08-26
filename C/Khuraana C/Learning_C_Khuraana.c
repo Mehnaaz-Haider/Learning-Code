@@ -964,5 +964,98 @@ int main()
         return 0;
         /* Pattern Printing (Question 35) - End Here */
     }
+
+    else if(strcmp(choice,"35a") == 0)
+    {
+        /* Pattern Printing (Question 35a) - Start Here */
+        printf("==================== Question 35a ====================\n");
+
+        int l,c;
+
+        for(l=1; l <= 5; l++)
+        {
+            for(c=5; c >= l; c--)
+            printf("1");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35a) - End Here */
+    }
+
+    else if(strcmp(choice,"35b") == 0)
+    {
+        /* Pattern Printing (Question 35b) - Start Here */
+        printf("==================== Question 35b ====================\n");
+
+        int l,c;
+
+        for(l=1; l <= 7; l++)
+        {
+            for(c=1; c <= l && l <= 4; c++)
+            printf("1");
+            for(c=7; c >= l && l > 4; c--)
+            printf("1");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35b) - End Here */
+    }
+
+    else if(strcmp(choice,"35c") == 0)
+    {
+        /* Pattern Printing (Question 35c) - Start Here */
+        printf("==================== Question 35c ====================\n");
+
+        int l,c;
+
+        for(l=1; l <= 7; l++)
+        {
+            for(c=4; c >= l && c <= 4; c--)
+            printf("1");
+            for(c=4; c <= l && l > 4; c++)
+            printf("1");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35c) - End Here */
+    }
+
+    else if(strcmp(choice,"35d") == 0)
+    {
+        /* Pattern Printing (Question 35d) - Start Here */
+        printf("==================== Question 35d ====================\n");
+
+        int l,c,x=5;
+
+        for(l=1; l <= 5; l++)
+        {
+            for(c=5; c >= l; c--)
+            printf("%d",x);
+            x--;
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35d) - End Here */
+    }
+
+    else if(strcmp(choice,"35e") == 0)
+    {
+        /* Pattern Printing (Question 35e) - Start Here */
+        printf("==================== Question 35e ====================\n");
+
+        int l,c,x;
+
+        for(l=1; l <= 5; l++)
+        {
+            for(c=5, x=1; c >= l; c--)
+            {
+                printf("%d",x);
+                x++;
+            }
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35e) - End Here */
+    }
     else printf("invalid choice");
 }
