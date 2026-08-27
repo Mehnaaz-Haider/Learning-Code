@@ -1243,5 +1243,28 @@ int main()
         return 0;
         /* Pattern Printing (Question 35k) - End Here */
     }
+
+    else if(strcmp(choice,"35l") == 0)
+    {
+        /* Pattern Printing (Question 35l) - Start Here */
+        printf("==================== Question 35l ====================\n");
+
+        int l,s,c;
+
+        for(l=1; l <= 7; l++)
+        {
+            for(s=2; s <= l && l <= 4; s++)
+            printf(" ");
+            for(c=4; c >= l && l <= 4; c--)
+            printf("* ");
+            for(s=6; s >= l && l > 4; s--)
+            printf(" ");
+            for(c=4; c <= l && l > 4; c++)
+            printf("* ");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35l) - End Here */
+    }
     else printf("invalid choice");
 }
