@@ -1154,5 +1154,94 @@ int main()
         return 0;
         /* Pattern Printing (Question 35i) - End Here */
     }
+
+    else if(strcmp(choice,"35j") == 0)
+    {
+        /* Pattern Printing (Question 35j) - Start Here */
+        printf("==================== Question 35j ====================\n");
+
+        int l,s;
+
+        for(l=1; l <= 4; l++)
+        {
+            for(s=3; s >= l; s--)
+            printf(" ");
+            printf("*");
+            if(l != 1)
+            printf(" ");
+            if(l != 1)
+            printf("*");
+            if(l > 2)
+            printf(" ");
+            if(l > 2)
+            printf("*");
+            if(l > 3)
+            printf(" ");
+            if(l > 3)
+            printf("*");
+            for(s=3; s >= l; s--)
+            printf(" ");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35j) - End Here */
+    }
+
+    else if(strcmp(choice,"35j1") == 0)
+    {
+        /* Pattern Printing (Question 35j1) - Start Here */
+        printf("==================== Question 35j1 ====================\n");
+
+        int l,s,c;
+
+        for(l=1; l <= 4; l++)
+        {
+            for(s=3; s >= l; s--)
+            printf(" ");
+            for(c=1; c <= l; c++)
+            printf("* ");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35j1) - End Here */
+    }
+
+    else if(strcmp(choice,"35j2") == 0)
+    {
+        /* Pattern Printing (Question 35j2) - Start Here */
+        printf("==================== Question 35j2 ====================\n");
+
+        int l,s,c;
+
+        for(l=1; l <= 10; l++)
+        {
+            for(s=9; s >= l; s--)
+            printf(" ");
+            for(c=1; c <= l; c++)
+            printf("* ");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35j2) - End Here */
+    }
+
+    else if(strcmp(choice,"35k") == 0)
+    {
+        /* Pattern Printing (Question 35k) - Start Here */
+        printf("==================== Question 35k ====================\n");
+
+        int l,s,c;
+
+        for(l=1; l <= 4; l++)
+        {
+            for(s=2; s <= l; s++)
+            printf(" ");
+            for(c=4; c >= l; c--)
+            printf("* ");
+            printf("\n");
+        }
+        return 0;
+        /* Pattern Printing (Question 35k) - End Here */
+    }
     else printf("invalid choice");
 }
