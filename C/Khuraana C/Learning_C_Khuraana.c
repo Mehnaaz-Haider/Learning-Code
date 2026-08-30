@@ -1266,5 +1266,42 @@ int main()
         return 0;
         /* Pattern Printing (Question 35l) - End Here */
     }
+
+    else if(strcmp(choice,"36") == 0)
+    {
+        /* Print Array in Reverse Order (Question 36) - Start Here */
+        printf("==================== Question 36 ====================\n");
+
+        int x[10], i;
+
+        printf("Write 10 Integers:\n");
+        for(i=0; i <= 9; i++)
+        scanf("%d",&x[i]);
+
+        for(i=9; i >= 0; i--)
+        printf("%d  ",x[i]);
+        return 0;
+        /* Print Array in Reverse Order (Question 36) - End Here */
+    }
+
+    else if(strcmp(choice,"37") == 0)
+    {
+        /* Greatest of 10 numbers using Array (Question 37) - Start Here */
+        printf("==================== Question 37 ====================\n");
+
+        long long int x[10],i,j;
+
+        printf("Write 10 numbers:\n");
+        for(i=0; i <= 9; i++)
+        scanf("%d",&x[i]);
+
+        j = x[0];
+        for(i=1; i <= 9; i++)
+        if(j < x[i])
+        j = x[i];
+        printf("\n\nGreatest of 10 Number is: %d",j);
+        return 0;
+        /* Greatest of 10 numbers using Array (Question 37) - End Here */
+    }
     else printf("invalid choice");
 }
