@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <windows.h>
 #include <string.h>
+#include <math.h>
 
 int main()
 {
@@ -1293,15 +1294,67 @@ int main()
 
         printf("Write 10 numbers:\n");
         for(i=0; i <= 9; i++)
-        scanf("%d",&x[i]);
+        scanf("%lld",&x[i]);
 
         j = x[0];
         for(i=1; i <= 9; i++)
         if(j < x[i])
         j = x[i];
-        printf("\n\nGreatest of 10 Number is: %d",j);
+        printf("\n\nGreatest of 10 Number is: %lld",j);
         return 0;
         /* Greatest of 10 numbers using Array (Question 37) - End Here */
+    }
+
+    else if(strcmp(choice,"38") == 0)
+    {
+        /* Binary Conversion using Array (Question 38) - Start Here */
+        printf("==================== Question 38 ====================\n");
+
+        int x,z[5],i; // size ka jhol hai, baad mein clear kr dena.
+
+        printf("Write a positive integer number: ");
+        scanf("%d",&x);
+
+        if(x == 0)
+        printf("0");
+        else if(x > 0)
+        {
+            for(i=0; x != 0; x = x/2, i++)
+            z[i] = x%2;
+            for(i = i-1; i >= 0; i--)    // i ka max value tumne apne se nhi likha
+            printf("%d",z[i]);
+        }
+        else
+        printf("Number is negative!");
+        return 0;
+        /* Binary Conversion using Array (Question 38) - End Here */
+    }
+
+    else if(strcmp(choice,"38a") == 0)
+    {
+        /* Binary Conversion without using Array (Question 38a) - Start Here */
+        printf("==================== Question 38a ====================\n");
+
+        int x,y,z,i;     // Yeh pura ka pura program tumne apne se nhi likha.
+
+        printf("Write a positive integer number: ");
+        scanf("%d",&x);
+
+        if(x == 0)
+        printf("0");
+        else if(x > 0)
+        {
+            for(i=0,z=0; x != 0; x = x/2, i++)
+            {
+                y = x%2;
+                z = z + pow(10,i)*y;
+            }
+            printf("%d",z);
+        }
+        else
+        printf("Number is Negative!");
+        return 0;
+        /* Binary Conversion without using Array (Question 38a) - End Here */
     }
     else printf("invalid choice");
 }
