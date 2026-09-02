@@ -1486,5 +1486,73 @@ int main()
         }
         /* Addition of matrix using Array (Question 39b) - End Here */
     }
+
+    else if(strcmp(choice,"39c") == 0)
+    {
+        /* Multiplication of matrix using Array (Question 39c) - Start Here */
+        printf("==================== Question 39c ====================\n");
+
+        SetConsoleOutputCP(65001);
+        int m1[10][10],m2[10][10],m3[10][10],r1,c1,r2,c2,r3,c3,i1,j1,i2,j2,i3,j3,s;
+
+        printf("Define the size of first matrix:\n");
+        printf("rows = ");
+        scanf("%d",&r1);
+        printf("columns = ");
+        scanf("%d",&c1);
+        printf("Put %d numbers in %d × %d matrix:\n",(r1*c1),r1,c1);
+        for(i1=0; i1 <= (r1-1); i1++)
+        for(j1=0; j1 <= (c1-1); j1++)
+        scanf("%d",&m1[i1][j1]);
+        printf("Define the size of second matrix:\n");
+        printf("rows = ");
+        scanf("%d",&r2);
+        printf("columns = ");
+        scanf("%d",&c2);
+        printf("Put %d numbers in %d × %d matrix:\n",(r2*c2),r2,c2);
+        for(i2=0; i2 <= (r2-1); i2++)
+        for(j2=0; j2 <= (c2-1); j2++)
+        scanf("%d",&m2[i2][j2]);
+        printf("\n");
+
+        if(c1 != r2)
+        printf("This operation is undefined!");
+        else
+        {
+            r3 = r1;
+            c3 = c2;
+            for(i1=0, i3=0; i1 <= (r1-1) && i3 <= (r3-1); i1++, i3++)
+            {
+                for(j2=0, j3=0; j2 <= (c2-1) && j3 <= (c3-1); j2++, j3++)
+                {
+                    for(j1=0, i2=0, s=0; j1 <= (c1-1) && i2 <= (r2-1); j1++,i2++)
+                    s = s + (m1[i1][j1] * m2[i2][j2]);
+                    m3[i3][j3] = s;
+                }
+            }
+            for(i1=0; i1 <= (r1-1); i1++)
+            {
+                for(j1=0; j1 <= (c1-1); j1++)
+                printf("%d\t",m1[i1][j1]);
+                printf("\n");
+            }
+            printf("\n      ×\n");
+            for(i2=0; i2 <= (r2-1); i2++)
+            {
+                for(j2=0; j2 <= (c2-1); j2++)
+                printf("%d\t",m2[i2][j2]);
+                printf("\n");
+            }
+            printf("\n      =\n");
+            for(i3=0; i3 <= (r3-1); i3++)
+            {
+                for(j3=0; j3 <= (c3-1); j3++)
+                printf("%d\t",m3[i3][j3]);
+                printf("\n");
+            }
+            return 0;
+        }
+        /* Multiplication of matrix using Array (Question 39c) - End Here */
+    }
     else printf("invalid choice");
 }
