@@ -4,6 +4,7 @@
 #include <string.h>
 #include <math.h>
 
+int add(int a, int b);
 int main()
 {
     /* Insert Your Choice - Code Start*/
@@ -1584,5 +1585,28 @@ int main()
         return 0;
         /* Checking Palindrome String (Question 40) - End Here */
     }
+
+    else if(strcmp(choice,"41") == 0)
+    {
+        /* Add 2 number using user-defined function (Question 41) - Start Here */
+        printf("==================== Question 41 ====================\n");
+
+        int x,y,z;
+
+        printf("Write two numbers:\n");
+        scanf("%d%d",&x,&y);
+
+        z = add(x,y);
+
+        printf("Sum of two numbers = %d",z);
+        return 0;
+        /* Add 2 number using user-defined function (Question 41) - End Here */
+    }
     else printf("invalid choice");
+}
+int add(int a, int b)
+{
+    int c;
+    c = a + b;
+    return c;
 }
