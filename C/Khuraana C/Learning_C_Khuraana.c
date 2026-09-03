@@ -1554,5 +1554,35 @@ int main()
         }
         /* Multiplication of matrix using Array (Question 39c) - End Here */
     }
+
+    else if(strcmp(choice,"40") == 0)
+    {
+        /* Checking Palindrome String (Question 40) - Start Here */
+        printf("==================== Question 40 ====================\n");
+
+        char x[1000],y[1000],z[1000];
+        int i,j=0;
+
+        printf("Write Someting: ");
+        getchar();
+        fgets(x, sizeof(x), stdin);
+        x[strcspn(x,"\n")] = '\0';
+
+        strcpy(z,x);
+        for(i=0; x[i] != '\0'; i++)
+        if(x[i] != ' ')
+        {
+            x[j] = x[i];
+            j++;
+        }
+        x[j] = '\0';
+        strcpy(y,strlwr(x));
+        if(strcmp(y,strrev(x)) == 0)
+        printf("%s is Palindrome",z);
+        else
+        printf("%s is not a Palindrome",z);
+        return 0;
+        /* Checking Palindrome String (Question 40) - End Here */
+    }
     else printf("invalid choice");
 }
