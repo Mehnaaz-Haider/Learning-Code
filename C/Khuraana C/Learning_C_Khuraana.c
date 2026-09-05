@@ -1602,6 +1602,24 @@ int main()
         return 0;
         /* Add 2 number using user-defined function (Question 41) - End Here */
     }
+
+    else if(strcmp(choice,"42") == 0)
+    {
+        /* Factorial using Recursion (Question 42) - Start Here */
+        printf("==================== Question 42 ====================\n");
+
+        int x,z;
+
+        printf("Write a number: ");
+        scanf("%d",&x);
+
+        int fact(int y);   // This is prototype
+        z = fact(x);
+
+        printf("%d",z);
+        return 0;
+        /* Factorial using Recursion (Question 42) - End Here */
+    }
     else printf("invalid choice");
 }
 int add(int a, int b)
@@ -1609,4 +1627,11 @@ int add(int a, int b)
     int c;
     c = a + b;
     return c;
+}
+int fact(int y)
+{
+    if(y == 0)
+    return 1;
+    else
+    return y*fact(y-1);
 }
