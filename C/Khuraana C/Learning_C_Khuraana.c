@@ -1620,6 +1620,55 @@ int main()
         return 0;
         /* Factorial using Recursion (Question 42) - End Here */
     }
+
+    else if(strcmp(choice,"43") == 0)
+    {
+        /* Multiplication using Recursion (Question 43) - Start Here */
+        printf("==================== Question 43 ====================\n");
+        
+        SetConsoleOutputCP(65001);
+        int x,y,z;
+
+        printf("Write 2 positive integers:\n");
+        scanf("%d%d",&x,&y);
+
+        int mul(int n,int m);
+        if(x < 0 || y < 0)
+        printf("Please put positive integer!");
+        else if(x == 0 || y == 0)
+        printf("%d × %d = 0",x,y);
+        else
+        {
+           z = mul(x,y);
+           printf("%d × %d = %d",x,y,z);
+        }
+        return 0;
+        /* Multiplication using Recursion (Question 43) - End Here */
+    }
+
+    else if(strcmp(choice,"44") == 0)
+    {
+        /* Power using Recursion (Question 44) - Start Here */
+        printf("==================== Question 44 ====================\n");
+        
+        int x,y,z;
+        printf("Write 2 positive integers:\n");
+        scanf("%d%d",&x,&y);
+        int my_pow(int n, int m);
+        if(x < 0 || y < 0)
+        printf("Please put positive integer!");
+        else if(x == 0)
+        printf("%d^%d = 0",x,y);
+        else if(y == 0)
+        printf("%d^%d = 1",x,y);
+        else
+        {
+            z = my_pow(x,y);
+            printf("%d^%d = %d",x,y,z);
+        }
+        return 0;
+        /* Power using Recursion (Question 44) - End Here */
+    }
     else printf("invalid choice");
 }
 int add(int a, int b)
@@ -1634,4 +1683,20 @@ int fact(int y)
     return 1;
     else
     return y*fact(y-1);
+}
+int mul(int n,int m)
+{
+    m--;
+    if(m == 0)
+    return n;
+    else
+    return n + mul(n,m);
+}
+int my_pow(int n, int m)
+{
+    m--;
+    if(m == 0)
+    return n;
+    else
+    return n*pow(n,m);
 }
