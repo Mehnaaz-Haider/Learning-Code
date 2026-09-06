@@ -1669,6 +1669,21 @@ int main()
         return 0;
         /* Power using Recursion (Question 44) - End Here */
     }
+
+    else if(strcmp(choice,"45") == 0)
+    {
+        /* Fibonacci Series using Recursion (Question 45) - Start Here */
+        printf("==================== Question 45 ====================\n");
+        
+        int x,y;
+        printf("Write a number: ");
+        scanf("%d",&x);
+        int fib(int n);   // This is prototype.
+        y = fib(x);
+        printf("Fibonacci number of %d = %d",x,y);
+        return 0;
+        /* Fibonacci Series using Recursion (Question 45) - End Here */
+    }
     else printf("invalid choice");
 }
 int add(int a, int b)
@@ -1699,4 +1714,14 @@ int my_pow(int n, int m)
     return n;
     else
     return n*pow(n,m);
+}
+int fib(int n)
+{
+    int z;
+    if(n == 1)
+    return 1;
+    else if(n == 0)
+    return 0;
+    else 
+    return z = fib(n-1) + fib(n-2);
 }
